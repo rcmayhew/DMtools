@@ -6,7 +6,7 @@ namespace Pathfinder
 {
     // Contains the global reference to the profiencies
     public enum Levels { untrained = 0, trained = 2, expert = 4, master = 6, legendary = 8 }
-    class Proficiency
+    public class Proficiency
     {
         private Levels Proficient;
         private int PlayerLevel; 
