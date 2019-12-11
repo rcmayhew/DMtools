@@ -11,13 +11,8 @@ namespace Pathfinder
     public class ACBonus : Bonus
     {
         private readonly int ACBase = 10;
-        public ACBonus(Levels pro, int lev, int cir = 0, int ite = 0, int stat = 0, int unty = 0) {
-            this.level = lev;
-            this.proficiency = new Proficiency(pro, lev);
-            this.circumstantial = cir;
-            this.item = ite;
-            this.status = stat;
-            this.untyped = unty;
+        public ACBonus(Levels pro, int lev, int att, int cir = 0, int ite = 0, int stat = 0, int unty = 0) : 
+            base(pro, lev, att, cir, ite, stat, unty) {
 
         }
 
@@ -27,7 +22,7 @@ namespace Pathfinder
             {
                 return forced;
             }
-            return this.proficiency.ProficiencyBonus() + this.level + this.circumstantial + this.item + this.status + this.untyped + this.ACBase;
+            return this.FinalBonus() + this.ACBase;
         }
     }
 }
