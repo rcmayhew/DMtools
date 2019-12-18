@@ -10,7 +10,7 @@ namespace Pathfinder_Tests
         [TestMethod]
         public void UntrainedTest()
         {
-            int expected = 0;
+            int expected = level;
             Proficiency proficiency = new Proficiency(Levels.untrained, this.level);
             int actual = proficiency.ProficiencyBonus();
             Assert.AreEqual(expected, actual, 0.001, "Untrained Bonus not calculating correctly");

@@ -2,6 +2,11 @@
 using System.Collections.Generic;
 using System.Text;
 
+/* TODO
+ * Add increase proficincy level interface
+ * add increase level interface
+ */
+
 namespace Pathfinder
 {
     // Contains the global reference to the profiencies
@@ -16,7 +21,7 @@ namespace Pathfinder
             // The player level is not added to the bonus if they are untrained
             if( this.Proficient == Levels.untrained)
             {
-                return 0;
+                return PlayerLevel;
             }
             else
             {

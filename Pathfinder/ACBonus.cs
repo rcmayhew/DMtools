@@ -16,6 +16,15 @@ namespace Pathfinder
 
         }
 
+        public void MaxArmorBonus(int maxarmor)
+        {
+            // need to be reran after reset
+            if (this.attribute > maxarmor)
+            {
+                this.attribute = maxarmor;
+            }
+        }
+
         public int FinalACBonus()
         {
             if (forced != 0)

@@ -2,13 +2,19 @@
 using System.Collections.Generic;
 using System.Text;
 
+
+/* TODO
+ * Add Profiencey interface
+ * Increase attributes
+ * Add penalties
+ */
 namespace Pathfinder
 {
     public class Bonus
     {
         internal Proficiency proficiency;
         internal int level;
-        internal int att;
+        internal int attribute;
         internal int circumstantial;
         internal int item;
         internal int status;
@@ -25,11 +31,11 @@ namespace Pathfinder
             this.status = 0;
             this.untyped = 0;
         }
-        public Bonus(Levels pro, int lev, int at, int cir=0, int ite=0, int stat=0, int unty=0)
+        public Bonus(Levels pro, int level, int attribute, int cir=0, int ite=0, int stat=0, int unty=0)
         {
-            this.level = lev;
-            this.proficiency = new Proficiency(pro, lev);
-            this.att = at;
+            this.level = level;
+            this.proficiency = new Proficiency(pro, level);
+            this.attribute = attribute;
             this.circumstantial = cir;
             this.item = ite;
             this.status = stat;
@@ -47,7 +53,7 @@ namespace Pathfinder
             {
                 return forced;
             }
-            return this.proficiency.ProficiencyBonus() + this.level + this.att + this.circumstantial + this.item + this.status + this.untyped;
+            return this.proficiency.ProficiencyBonus() + this.attribute + this.circumstantial + this.item + this.status + this.untyped;
         }
     }
 }

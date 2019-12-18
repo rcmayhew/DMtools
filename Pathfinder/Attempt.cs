@@ -1,7 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-
+/* This will class will be used for all stats that dices are applied to
+ * attacks, 
+ * TODO
+ * add logging
+ * add printing
+ * add increase proficency
+ * add increase level
+ * add increase stats
+ */
 namespace Pathfinder
 {
     class Attempt
@@ -16,7 +24,7 @@ namespace Pathfinder
 
         public Attempt()
         {
-            //defualt will create a 1d20 with no bonus
+            //defualt will create a 1d20 with +1 bonus
             dice = new Dice();
             bonus = new Bonus();
         }
